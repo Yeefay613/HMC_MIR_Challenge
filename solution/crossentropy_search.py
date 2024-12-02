@@ -131,7 +131,6 @@ def crossentropy_parameter_search(
     return results
 
 
-@problem.tag("hw3-A")
 def accuracy_score(model, dataloader) -> float:
     """Calculates accuracy of model on dataloader. Returns it as a fraction.
 
@@ -145,11 +144,6 @@ def accuracy_score(model, dataloader) -> float:
     Returns:
         float: Vanilla python float resprenting accuracy of the model on given dataset/dataloader.
             In range [0, 1].
-
-    Note:
-        - For a single-element tensor you can use .item() to cast it to a float.
-        - This is similar to MSE accuracy_score function,
-            but there will be differences due to slightly different targets in dataloaders.
     """
     correct = 0
     total = 0
@@ -166,8 +160,6 @@ def accuracy_score(model, dataloader) -> float:
 
     return correct / total
 
-
-@problem.tag("hw3-A", start_line=7)
 def main():
     """
     Main function of the Crossentropy problem.
